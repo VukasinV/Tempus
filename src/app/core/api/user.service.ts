@@ -1,9 +1,14 @@
 import { Injectable } from '@angular/core';
+import { ApiService } from './api.service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UserService {
+  constructor(private apiService: ApiService) {}
 
-  constructor() { }
+  // TODO: model user
+  createUser(user: any) {
+    return this.apiService.post('/user', user);
+  }
 }
