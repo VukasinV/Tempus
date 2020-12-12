@@ -14,14 +14,11 @@ export class ApiService {
   }
 
   post(path: string, body = {}): Observable<any> {
-    return this.http.post(
-      `${environment.baseUrl}${path}`,
-      JSON.stringify(body)
-    );
+    return this.http.post(`${environment.baseUrl}${path}`, body);
   }
 
   put(path: string, body = {}): Observable<any> {
-    return this.http.put(`${environment.baseUrl}${path}`, JSON.stringify(body));
+    return this.http.put(`${environment.baseUrl}${path}`, body);
   }
 
   delete(path: string): Observable<any> {

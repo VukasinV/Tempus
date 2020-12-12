@@ -5,25 +5,27 @@
 </form>
 
 <div class="signup-form__container">
-  <form class="signup-form">
+  <form class="signup-form" [formGroup]="signUpForm">
     <div class="form-control">
       <label for="name">Name:</label>
-      <input type="text" id="name" />
+      <input type="text" id="name" formControlName="name" />
     </div>
     <div class="form-control">
       <label for="email">Email:</label>
-      <input type="text" id="email" />
+      <input type="text" id="email" formControlName="email" />
     </div>
     <div class="form-control">
       <label for="username_new">Username:</label>
-      <input type="text" id="username_new" />
+      <input type="text" id="username_new" formControlName="username" />
     </div>
     <div class="form-control">
       <label for="password_new">Password:</label>
-      <input type="password" id="password_new" />
+      <input type="password" id="password_new" formControlName="password" />
     </div>
     <div class="btn-container">
-      <button type="button" class="signup-btn">SIGNUP</button>
+      <button type="button" class="signup-btn" (click)="signUp()">
+        SIGNUP
+      </button>
     </div>
   </form>
 </div>

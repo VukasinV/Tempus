@@ -9,6 +9,6 @@ export class UserService {
 
   // TODO: model user
   createUser(user: any) {
-    return this.apiService.post('/user', user);
+    return this.apiService.post('/users', user);
   }
 }
